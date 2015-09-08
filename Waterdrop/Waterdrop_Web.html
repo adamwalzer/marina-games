@@ -21,34 +21,41 @@
 				
 			};
 			var u = new UnityObject2(config);
+        var stage = 1;
+        var level = 1;
+        var score = 0;
+        var time = 90;
+        //pass params to game
+        function OnUnityInited(splashscreen) {
+            //mode, 0 = stages mode, 1 = single levels mode
+            u.getUnity().SendMessage("/States/Root/StateGame <Current>", "JSCallFromPageMode", this.stage);
+            //scores
+            u.getUnity().SendMessage("/States/Root/StateGame <Current>", "JSCallFromPageScores", this.score);
+            //time
+            u.getUnity().SendMessage("/States/Root/StateGame <Current>", "JSCallFromPageTime", this.time);
+            //level
+            u.getUnity().SendMessage("/States/Root/StateGame <Current>", "JSCallFromPageLevel", this.level);
+            //start game 0=false, 1=true
+            u.getUnity().SendMessage("/States/Root/StateGame <Current>", "JSCallFromPageStart", splashscreen);
+        }
 
-			//pass params to game
-			function OnUnityInited(){
-			//mode, 0 = stages mode, 1 = single levels mode
-				u.getUnity().SendMessage("/States/Root/StateGame <Current>", "JSCallFromPageMode", 1);
-			//scores
-				u.getUnity().SendMessage("/States/Root/StateGame <Current>", "JSCallFromPageScores", 0);
-			//level
-				u.getUnity().SendMessage("/States/Root/StateGame <Current>", "JSCallFromPageLevel", 1);
-			}
-			//calls, when group of levels is completed, arg is collected exp
-			function StageCompleted( arg )
-			{
-			//todo
-			}
-			function GameCompleted( arg )
-			{
-			//todo
-			}
-			function GoToNextLevel( arg )
-			{
-			//todo
-			}
-			function ReplayLevel( arg )
-			{
-			//todo
-			}
-
+        function GoToNextLevel(arg) {
+            this.level++;
+            this.score += arg;
+            OnUnityInited(0);
+        }
+        function ReplayLevel(arg) {
+            OnUnityInited(0);
+        }
+        function ReplayGame(arg) {
+            this.level = 1;
+            this.score = 0;
+            OnUnityInited(1);
+        }
+        function ExitGame(arg) {
+            this.score += arg;
+alert('ExitGame');
+        }
 			jQuery(function() {
 
 				var $missingScreen = jQuery("#unityPlayer").find(".missing");
