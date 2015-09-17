@@ -25,6 +25,7 @@
         var level = 1;
         var score = 0;
         var time = 90;
+	var bonusLvlTime = 20;
         //pass params to game
         function OnUnityInited(splashscreen) {
             //mode, 0 = stages mode, 1 = single levels mode
@@ -32,7 +33,7 @@
             //scores
             u.getUnity().SendMessage("/States/Root/StateGame <Current>", "JSCallFromPageScores", this.score);
             //time
-            u.getUnity().SendMessage("/States/Root/StateGame <Current>", "JSCallFromPageTime", this.time);
+            u.getUnity().SendMessage("/States/Root/StateGame <Current>", "JSCallFromPageTime", this.level == 9 ? this.bonusLvlTime : this.time);
             //level
             u.getUnity().SendMessage("/States/Root/StateGame <Current>", "JSCallFromPageLevel", this.level);
             //start game 0=false, 1=true
