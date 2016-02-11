@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>TurtleHardle</title>
+    <style>
+    /* a style sheet needs to be present for cursor hiding and custom cursors to work. */
+    </style>
+  </head>
+  <body>
+    <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="400px" width="712px"></canvas>
+    <script type='text/javascript'>
+  var Module = {
+    TOTAL_MEMORY: 536870912,
+    errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
+    compatibilitycheck: null,
+    dataUrl: "Release/TurtleHardle_WebGL.data",
+    codeUrl: "Release/TurtleHardle_WebGL.js",
+    memUrl: "Release/TurtleHardle_WebGL.mem",
+  };
+
+  <!--
+			//pass params to game
+			function OnUnityInited(){
+			//mode, 0 = stages mode, 1 = single levels mode
+				SendMessage("StateGame <Current>", "JSCallFromPageMode", 1);
+			//scores
+				SendMessage("StateGame <Current>", "JSCallFromPageScores", 0);
+			//level time (in sec)
+				SendMessage("StateGame <Current>", "JSCallFromPageTime", 20);
+			//level
+				SendMessage("StateGame <Current>", "JSCallFromPageLevel", 1);
+			//start game, use splashscreen: 0=false, 1=true
+				SendMessage("StateGame <Current>", "JSCallFromPageStart", 1);
+			}
+			//calls, when group of levels is completed, arg is collected exp
+			
+	
+			function GameCompleted( arg )
+			{
+			//todo
+			}
+			function GoToNextLevel( arg )
+			{
+			//todo
+			}
+			function ReplayLevel( arg )
+			{
+			//todo
+			}
+			function ReplayGame( arg )
+			{
+			//todo
+			}
+			function QuitGame( arg )
+			{
+			//todo
+			}
+		-->
+
+</script>
+<script src="Release/UnityLoader.js"></script>
+
+  </body>
+</html>
