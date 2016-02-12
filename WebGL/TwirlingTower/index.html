@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Twirling Tower</title>
+    <style>
+    /* a style sheet needs to be present for cursor hiding and custom cursors to work. */
+    </style>
+  </head>
+  <body>
+    <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="400px" width="712px"></canvas>
+    <script type='text/javascript'>
+  var Module = {
+    TOTAL_MEMORY: 536870912,
+    errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
+    compatibilitycheck: null,
+    dataUrl: "Release/TwirlingTower_WebGL.data",
+    codeUrl: "Release/TwirlingTower_WebGL.js",
+    memUrl: "Release/TwirlingTower_WebGL.mem",
+  };
+
+  <!--
+  var gameMode = 1;
+  var currentLevel = 1;
+  var totalScores = 0;
+  var levelTime = 60;
+  var needSpalshScreen = 1;
+			//pass params to game
+			function OnUnityInited(){
+				StartLevel(gameMode, totalScores, levelTime, currentLevel, needSpalshScreen);
+				needSpalshScreen = 0;
+			}
+			//calls, when group of levels is completed, arg is collected exp
+			
+	
+			function GameCompleted( arg )
+			{
+				window.close();
+			}
+			function GoToNextLevel( arg )
+			{
+				totalScores += arg;
+				currentLevel++;
+				StartLevel(gameMode, totalScores, levelTime, currentLevel, needSpalshScreen);
+
+			}
+			function ReplayLevel( arg )
+			{
+				StartLevel(gameMode, totalScores, levelTime, currentLevel, needSpalshScreen);
+			}
+			function ReplayGame( arg )
+			{
+				needSpalshScreen = 1;
+				currentLevel = 1;
+				totalScores = 0;
+				StartLevel(gameMode, totalScores, levelTime, currentLevel, needSpalshScreen);
+				needSpalshScreen = 0;
+			}
+			function QuitGame( arg )
+			{
+				window.close();
+			}
+
+			function StartLevel(mode, score, time, level, splashSceen){
+				SendMessage("StateGame <Current>", "JSCallFromPageMode", mode);
+				SendMessage("StateGame <Current>", "JSCallFromPageScores", score);
+				SendMessage("StateGame <Current>", "JSCallFromPageTime", time);
+				SendMessage("StateGame <Current>", "JSCallFromPageLevel", level);
+				SendMessage("StateGame <Current>", "JSCallFromPageStart", splashSceen);
+			}
+		-->
+
+</script>
+<script src="Release/UnityLoader.js"></script>
+
+  </body>
+</html>
