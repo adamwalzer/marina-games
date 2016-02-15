@@ -1,0 +1,37 @@
+.DS_Store
+Temp/
+Library/
+Builds/
+obj/
+*.svd
+*.pyc
+venv
+!Library/*.asset
+!Library/AssetImportState
+!Library/AssetVersioning.db
+!Library/BuildPlayer.prefs
+!Library/ScriptMapper
+!Library/assetservercachev3
+!Library/expandedItems
+!Library/guidmapper
+!Library/unity default resources
+!Library/unity editor resources
+
+
+/ReefBuilder/CoralReef.userprefs
+/ReefBuilder/Assembly-CSharp.csproj
+/ReefBuilder/Assembly-CSharp.pidb
+/ReefBuilder/Assembly-CSharp-Editor.csproj
+/ReefBuilder/Assembly-CSharp-Editor.pidb
+/ReefBuilder/Assembly-CSharp-Editor-vs.csproj
+/ReefBuilder/Assembly-CSharp-firstpass.csproj
+/ReefBuilder/Assembly-CSharp-firstpass.pidb
+/ReefBuilder/Assembly-CSharp-firstpass-vs.csproj
+/ReefBuilder/Assembly-CSharp-vs.csproj
+/ReefBuilder/Assembly-UnityScript-firstpass.pidb
+/ReefBuilder/Assembly-UnityScript-firstpass.unityproj
+/ReefBuilder/Assembly-UnityScript-firstpass-vs.unityproj
+/ReefBuilder/ReefBuilder.suo
+
+*.*.meta
+*.meta

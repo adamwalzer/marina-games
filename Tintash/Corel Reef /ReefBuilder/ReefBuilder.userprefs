@@ -1,0 +1,26 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Tutorial.cs">
+    <Files>
+      <File FileName="Assets/DataFile.cs" Line="12" Column="30" />
+      <File FileName="Assets/Scripts/ObjectsMovement.cs" Line="96" Column="24" />
+      <File FileName="Assets/Scripts/Canon.cs" Line="1" Column="1" />
+      <File FileName="Assets/Controller.cs" Line="769" Column="14" />
+      <File FileName="Assets/Scripts/Levels.cs" Line="63" Column="44" />
+      <File FileName="Assets/Scripts/Grid.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Shrub.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/UI Aniamtion scripts/MainMenueAniamtion.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/UI Aniamtion scripts/StartAnimation.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/UI Aniamtion scripts/OnCompleteStarAnimation.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/HotBalloonMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/SoundManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/VirtualBoxInfo.cs" Line="1" Column="1" />
+      <File FileName="Assets/DrawGrid.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Tutorial.cs" Line="132" Column="28" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
