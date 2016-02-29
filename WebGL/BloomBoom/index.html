@@ -42,6 +42,9 @@
 			{
 				totalScores += arg;
 				currentLevel++;
+				if(currentLevel == 11){
+					levelTime = 20;
+				}
 				StartLevel(gameMode, totalScores, levelTime, currentLevel, needSpalshScreen);
 
 			}
