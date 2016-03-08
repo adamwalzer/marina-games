@@ -26,6 +26,7 @@
   var totalScores = 0;
   var levelTime = 90;
   var needSpalshScreen = 1;
+  var maxLevel = 5;
 			//pass params to game
 			function OnUnityInited(){
 				StartLevel(gameMode, totalScores, levelTime, currentLevel, needSpalshScreen);
@@ -40,8 +41,12 @@
 			}
 			function GoToNextLevel( arg )
 			{
-				totalScores += arg;
-				currentLevel++;
+				if(currentLevel == maxLevel){
+					QuitGame(arg);
+				}else{
+					totalScores += arg;
+					currentLevel++;
+				}				
 				StartLevel(gameMode, totalScores, levelTime, currentLevel, needSpalshScreen);
 
 			}
@@ -59,7 +64,7 @@
 			}
 			function QuitGame( arg )
 			{
-				window.close();
+				console.log("Quit");
 			}
 
 			function StartLevel(mode, score, time, level, splashSceen){
