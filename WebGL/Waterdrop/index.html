@@ -25,11 +25,9 @@
   var currentLevel = 1;
   var totalScores = 0;
   var levelTime = 60;
-  var needSpalshScreen = 1;
 			//pass params to game
 			function OnUnityInited(){
-				StartLevel(gameMode, totalScores, levelTime, currentLevel, needSpalshScreen);
-				needSpalshScreen = 0;
+				StartLevel(gameMode, totalScores, levelTime, currentLevel);
 			}
 			//calls, when group of levels is completed, arg is collected exp
 			
@@ -45,32 +43,30 @@
 				if(currentLevel == 9 || currentLevel == 10 || currentLevel == 11){
 					levelTime = 20;
 				}
-				StartLevel(gameMode, totalScores, levelTime, currentLevel, needSpalshScreen);
+				StartLevel(gameMode, totalScores, levelTime, currentLevel);
 
 			}
 			function ReplayLevel( arg )
 			{
-				StartLevel(gameMode, totalScores, levelTime, currentLevel, needSpalshScreen);
+				StartLevel(gameMode, totalScores, levelTime, currentLevel);
 			}
 			function ReplayGame( arg )
 			{
 				needSpalshScreen = 1;
 				currentLevel = 1;
 				totalScores = 0;
-				StartLevel(gameMode, totalScores, levelTime, currentLevel, needSpalshScreen);
-				needSpalshScreen = 0;
+				StartLevel(gameMode, totalScores, levelTime, currentLevel);
 			}
 			function QuitGame( arg )
 			{
 				console.log("Quit");
 			}
 
-			function StartLevel(mode, score, time, level, splashSceen){
+			function StartLevel(mode, score, time, level){
 				SendMessage("StateGame <Current>", "JSCallFromPageMode", mode);
 				SendMessage("StateGame <Current>", "JSCallFromPageScores", score);
 				SendMessage("StateGame <Current>", "JSCallFromPageTime", time);
 				SendMessage("StateGame <Current>", "JSCallFromPageLevel", level);
-				SendMessage("StateGame <Current>", "JSCallFromPageStart", splashSceen);
 			}
 		-->
 
